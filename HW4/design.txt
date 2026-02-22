@@ -1,0 +1,18 @@
+This is our implementation for the thread based approach.
+Instead of 4 possible clients, wheneever I receive an accept on socket, I create a new thread. I have specified NTHREADS as 1000, which is max. no of threads.
+I have created a fun ok_fun which will run corresponding to a thread. It takes into input as void* ptr which stores the new_s for new client. And then the thread runs event_loop for that new_s.
+
+This is our implementation for the multiple clients through select function. We take into the while function, all fds socket fd, each client fd and stdin fd, so whenever anyone of them becomes ready, I have an activity number. I then check through fds to check what event has occured. Accordingly, new_s is setup, or input from the client is displayed, or stdin input is written to some client randomly, for s being set, any new_s being set, or STDIN_FILENO being set respectively.
+
+Yes messages, send by maximum 1000 clients are displayed, and stdin is written to some client randomly.
+
+Team members
+1) Aakash Chityala (2023005)
+2) Akshat Verma (2023065)
+3) Ansh Gaur (2023098)
+4) Bhavik Garg (2023170)
+5) Vidush Jindal (2023592)
+
+References-
+CN- Lecture-4
+Threading- Os slides
