@@ -1,0 +1,15 @@
+This assignments builds on multiple client and servers by using SELECT system call in server.c.
+
+We have modified server_helper.c file.
+For the first part, if any client sends a "LIST" message. The server responds to that particular client by the ids of clients separated by space.
+
+For the second part, if any client 'c' sends the message in format "DATA num_clients client_1 client_2 client_num_clients: message", the server sends the message to all clients mentioned by the id of client_id 'c'. 
+
+The strings four letters are matched by strcmp. We use sscanf for seeing how many clients to send message to in DATA command. Then manually extract all the client ids (varying number) and store them in ids list. Then we extract the message and store it in data. The data is sent one by one to all the mentioned clients by the send_message api call.
+
+Team Members-
+1) Aakash Chityala (2023005)
+2) Akshat Verma (2023065)
+3) Ansh Gaur (2023098)
+4) Bhavik Garg (2023170)
+5) Vidush Jindal (2023592)
